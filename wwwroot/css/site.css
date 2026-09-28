@@ -46,3 +46,27 @@ footer {
     color: white;
     text-decoration: none;
 }
+
+
+
+/*----------Tabla-----*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+}
+
+th, td {
+    border: 1px solid #cccccc;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+th {
+    background: #1f4e79;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f2f6fa;
+}
