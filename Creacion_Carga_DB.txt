@@ -1,0 +1,28 @@
+CREATE TABLE categorias (
+    idCategoria INT IDENTITY(1,1) PRIMARY KEY,
+    descripcion VARCHAR(100) NOT NULL
+);
+CREATE TABLE productos (
+    idProducto INT IDENTITY(1,1) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    precio DECIMAL(18,2) NOT NULL,
+    categoria INT NOT NULL,
+    CONSTRAINT FK_productos_categorias
+        FOREIGN KEY (categoria) REFERENCES categorias(idCategoria)
+);
+
+INSERT INTO productos (nombre, precio, categoria) VALUES
+('Samsung Galaxy A15', 350000, 1),
+('Lenovo IdeaPad 3', 890000, 2),
+('Auriculares Sony WH-CH520', 75000, 3),
+('Mouse Logitech G203', 45000, 4),
+('PlayStation 5', 1200000, 5),
+('Cargador USB-C 20W', 18000, 4);
+
+
+
+SELECT p.idProducto, p.nombre, p.precio, c.descripcion
+FROM productos p
+INNER JOIN categorias c ON p.categoria = c.idCategoria;
+
+
