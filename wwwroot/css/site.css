@@ -3,6 +3,9 @@ body {
     margin: 0;
     background: #f2f2f2;
     color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -11,31 +14,86 @@ header {
     padding: 16px 24px;
 }
 
-    header h1 {
-        margin: 0;
-        font-size: 28px;
-    }
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
 
-    header p {
-        margin: 4px 0 0;
-    }
+header p {
+    margin: 4px 0 0;
+}
 
-    header a {
-        color: white;
-        text-decoration: none;
-    }
+header a {
+    color: white;
+    text-decoration: none;
+}
 
 main {
     max-width: 800px;
+    width: 100%;
     margin: 24px auto;
     background: white;
     padding: 24px;
+    box-sizing: border-box;
+    align-self: center;
+}
+
+h2 {
+    color: #1f4e79;
 }
 
 footer {
+    margin-top: auto;
+    background: #B0AAA9;
+    color: black;
     text-align: center;
-    color: #666;
-    padding: 12px;
+    padding: 16px 24px;
+}
+
+footer p {
+    margin: 0;
+}
+
+form {
+    width: 320px;
+    margin: 16px auto;
+    text-align: left;
+}
+
+label {
+    color: #1f4e79;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #1f4e79;
+    box-sizing: border-box;
+}
+
+button {
+    background: #1f4e79;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #163a5a;
+}
+
+main p a {
+    color: #1f4e79;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main p a:hover {
+    text-decoration: underline;
 }
 
 .menu a {
@@ -69,4 +127,38 @@ th {
 
 tbody tr:nth-child(even) {
     background: #f2f6fa;
+}
+
+/*----------Grilla Baja-----*/
+.form-ancho {
+    width: 100%;
+    text-align: center;
+}
+
+.form-ancho table {
+    text-align: left;
+}
+
+.form-ancho th:first-child,
+.form-ancho td:first-child {
+    width: 40px;
+    text-align: center;
+}
+
+/*----------Mensaje Colores-----*/
+.ok, .error {
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+.ok {
+    color: #0f6b2f;
+    background: #d8f3e2;
+    border: 1px solid #0f6b2f;
+}
+
+.error {
+    color: #a31616;
+    background: #fde0e0;
+    border: 1px solid #a31616;
 }

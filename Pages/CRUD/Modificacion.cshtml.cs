@@ -42,6 +42,7 @@ namespace Desp1Lab3.Pages.CRUD
         public List<CategoriaItem> Categorias { get; set; } = new();
 
         public string Mensaje { get; set; } = "";
+        public bool Correcto { get; set; }
 
         public void OnGet()
         {
@@ -152,6 +153,7 @@ namespace Desp1Lab3.Pages.CRUD
                 CategoriaOriginal = Categoria;
                 Nombre = Nombre.Trim();
                 Mensaje = "Producto modificado correctamente.";
+                Correcto = true;
             }
             catch (Exception)
             {
