@@ -66,12 +66,13 @@ namespace Desp1Lab3.Pages.CRUD
                     using (SqlCommand comando = new SqlCommand(consulta, conexion))
                     {
                         comando.Parameters.AddWithValue("@nombre", Nombre);
-                        comando.Parameters.AddWithValue("@precio", precio);
+                        comando.Parameters.AddWithValue("@precio", Precio);
                         comando.Parameters.AddWithValue("@categoria", Categoria);
                         comando.ExecuteNonQuery();
                     }
                 }
 
+                ModelState.Clear();
                 Mensaje = "Producto guardado correctamente.";
                 Correcto = true;
                 Nombre = "";

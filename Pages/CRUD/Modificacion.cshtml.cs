@@ -148,10 +148,15 @@ namespace Desp1Lab3.Pages.CRUD
                     }
                 }
 
-                NombreOriginal = Nombre.Trim();
-                PrecioOriginal = Precio;
-                CategoriaOriginal = Categoria;
-                Nombre = Nombre.Trim();
+                ModelState.Clear();
+                IdProducto = 0;
+                IdSeleccionado = 0;
+                Nombre = "";
+                Precio = "";
+                Categoria = 0;
+                NombreOriginal = "";
+                PrecioOriginal = "";
+                CategoriaOriginal = 0;
                 Mensaje = "Producto modificado correctamente.";
                 Correcto = true;
             }
