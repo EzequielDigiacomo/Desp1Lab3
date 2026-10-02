@@ -11,18 +11,5 @@ CREATE TABLE productos (
         FOREIGN KEY (categoria) REFERENCES categorias(idCategoria)
 );
 
-INSERT INTO productos (nombre, precio, categoria) VALUES
-('Samsung Galaxy A15', 350000, 1),
-('Lenovo IdeaPad 3', 890000, 2),
-('Auriculares Sony WH-CH520', 75000, 3),
-('Mouse Logitech G203', 45000, 4),
-('PlayStation 5', 1200000, 5),
-('Cargador USB-C 20W', 18000, 4);
-
-
-
-SELECT p.idProducto, p.nombre, p.precio, c.descripcion
-FROM productos p
-INNER JOIN categorias c ON p.categoria = c.idCategoria;
 
 
