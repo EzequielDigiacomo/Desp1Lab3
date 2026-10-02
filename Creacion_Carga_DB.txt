@@ -12,4 +12,21 @@ CREATE TABLE productos (
 );
 
 
+//Carga de datos en la tabla categorias
+INSERT INTO categorias (descripcion) VALUES
+('Smartphones'),
+('Laptops'),
+('Auriculares'),
+('Accesorios'),
+('Consolas');
+
+//Carga de datos en la tabla productos
+INSERT INTO productos (nombre, precio, categoria) VALUES
+('Samsung Galaxy A15', 350000, 1),
+('Lenovo IdeaPad 3', 890000, 2),
+('Auriculares Sony WH-CH520', 75000, 3),
+('Mouse Logitech G203', 45000, 4),
+('PlayStation 5', 1200000, 5),
+('Cargador USB-C 20W', 18000, 4);
+
 
